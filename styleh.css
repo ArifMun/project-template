@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    display: flex;
+    background-color: #efefef;
+    justify-content: space-around;  
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 0 7px rgba(204, 202, 202, 0.849);
+    position: fixed;
+    z-index: 4;
+}
+
+nav .logo {
+    letter-spacing: 3px;
+}
+
+nav .logo h1 a{
+    text-decoration: none;
+    color: #003356;
+    font-size: 40px;
+}
+nav .logo h1 a:hover{
+    color: green;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #003356;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+/* hamburgermenu */
+.menu-toogle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+/* space */
+.space{
+    height: 60px;
+}
+
+
+/* image */
+.image{
+    width: 100%;
+    height: 500px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    background-color: #8f8db2;
+}
+.image .promo img{
+    height: 450px;
+    width: 600px;
+}
+
+.image .promo{
+    margin:20px 10px auto;
+    box-sizing: border-box;
+}
+.image .promo p{
+    font-size: 30px;
+    margin: 20px auto;
+}
+.image .promo h1{
+    font-size: 40px;
+    margin: 25px auto;
+}
+.image .promo ul{
+    margin: 25px auto;
+    font-size: 25px;
+}
+.image .promo ul li{
+    margin: 15px auto;
+    list-style-type: none;
+}
+.image .promo .tombol{
+    display: flex;
+    justify-content: center;
+}
+.image .tombol button{
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f0ad4e;
+    color: white;
+    cursor: pointer;
+}
+.image .tombol button:hover{
+    background-color:  #ee9f30;
+    color: rgb(219, 213, 213);
+}
+
+/* title */
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003356;
+    color: white;
+    box-shadow: 0 0 7px rgba(204, 202, 202, 0.849);
+}
+.title h1{
+    font-size: 50px;
+    margin: 10px auto;
+}
+.title p{
+    font-size: 20px;
+    margin: 20px auto;
+}
+hr{
+    margin-top: 10px;
+    width: 90%;
+    height: 1px;
+    border: none;
+    background-color: rgb(153, 152, 152);
+    border-radius: 5px;
+}
+
+
+/* card */
+.col-card{
+    margin: 20px auto;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    
+}
+
+.kartu{
+    border-radius: 15px;
+    box-shadow:  0 4px 8px 0 silver;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.kartu.besar{
+    transform: scale(1.1);
+}
+.kartu.besar .header{
+    background-color: #fcaf4d;
+}
+.kartu.besar .content b{
+    background-color: #fcaf4d;
+}
+.kartu.besar .content ul li b{
+    background-color: white;
+    color: rgb(95, 94, 94);
+}
+.kartu .header{
+    background-color:#2e4c9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+.kartu .header h1{
+    margin: 5px auto;
+}
+.kartu .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px auto;
+}
+.kartu .content p{
+    margin: 10px auto;
+}
+.kartu .content b{
+    background-color: #6e3d97;
+    color: white;
+    border-radius: 15px;
+    margin: 5px 5px auto;
+    padding: 3px ;
+    border: none;
+}
+.kartu .content h1{
+    font-size: 40px;
+    margin: 20px auto;
+}
+.kartu .content .tag{
+    margin-top: -25px;
+    font-size: 15px;
+    color: grey;
+}
+.kartu .content button{
+    margin: 20px auto;
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: #003356;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+.kartu .content button:hover{
+    background-color: #084d7a;
+    color: silver;
+}
+.kartu .content .tag1{
+    color: grey;
+    font-size: 13px;
+    margin-top: -20px;
+}
+.kartu .content ul{
+    margin: 25px auto;
+    font-size: 15px;
+    color: rgb(95, 94, 94);
+}
+.kartu .content ul li{
+    list-style-type: none;
+    margin: 10px auto;
+}
+.kartu .content ul li b{
+    background-color: white;
+    color: rgb(95, 94, 94);
+}
+
+.kartu .footer{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    margin-top: -30px;
+}
+.kartu .footer a{
+    text-decoration: none;
+    color: blue;
+    font-weight: 550;
+}
+.kartu .footer a:hover{
+    color: black;
+}
+
+/* lainnya */
+.more{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+.more a{
+    border: 2px solid black;
+    margin: 10px 10px auto;
+    padding: 15px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+.more a:hover{
+    background-color: rgb(226, 221, 221);
+}
+
+/* bonus */
+.bonus{
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly; /*jarak sama*/
+    height: 400px;
+    border-radius: 10px; 
+    background-color: #6f93c3;
+    box-sizing: border-box;
+}
+.bonus .left{
+    height: 370px;
+    width: 45%;
+    margin: 15px 15px auto;
+    color: white;
+}
+.bonus .left p{
+    margin-top: 15px ;
+    font-size: 20px;
+}
+.bonus .right{
+    margin: 15px 15px auto;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.bonus .right img{
+    
+    height: 370px;
+}
+
+
+/* footer */
+footer{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+footer .foot h3{
+    color: silver;
+}
+footer .foot ul li{
+    font-size: 15px;
+    margin: 5px auto;
+    list-style-type: none;
+}
+footer .foot ul li a{
+    text-decoration: none;
+    color: silver;
+}
+footer .foot ul li a:hover{
+    color: #47ccff;
+}
+
+
+/* hamburger menu animation */
+.menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+    /*poros*/
+}
+
+.menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toogle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+
+/* responsive breakpoint */
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .menu-toogle {
+        display: flex;
+    }
+    nav{
+        position: fixed;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        /*veiwport height*/
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: silver;
+        transform: translatex(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    header{
+        display: none;
+    }
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid black;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* hosting */
+    .image .promo img{
+        display: none;
+    }
+    .image .promo p{
+        font-size: 20px;
+    }
+    .image .promo h1{
+        font-size: 25px;
+    }
+    .image .promo ul li{
+        font-size: 18px;
+    }
+
+    /* title */
+    .title h1{
+        font-size: 25px;
+    }
+    .title p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+    /* kartu */
+    .col-card {
+        flex-direction: column;
+        height: 1100px;
+    }
+    .col-card .kartu{
+        height: 220px;
+    }
+    .col-card .kartu .content p .tag, .tag1{
+        display: none;
+    }
+    .col-card .kartu .content button{
+        margin-top: -5px;
+    }
+    .col-card .kartu.besar{
+        transform: scale(1);
+    }
+
+    /* bonus */
+    .bonus .left h1{
+        font-size: 25px;
+    }
+    .bonus .left p{
+        font-size: 20px;
+    }
+    .bonus .left{
+        width: 100%;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .bonus .right{
+        display: none;
+    }
+    footer .foot:nth-child(1){
+        display: none;
+    }
+    footer .foot:nth-child(2){
+        display: none;
+    }
+
+}

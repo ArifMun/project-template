@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    display: flex;
+    background-color: #efefef;
+    justify-content: space-around;  
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 0 7px rgba(204, 202, 202, 0.849);
+    position: fixed;
+    z-index: 4;
+}
+
+nav .logo {
+    letter-spacing: 3px;
+}
+
+nav .logo h1 a{
+    text-decoration: none;
+    color: #003356;
+    font-size: 40px;
+}
+nav .logo h1 a:hover{
+    color: green;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #003356;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+/* hamburgermenu */
+.menu-toogle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+header img {
+    height: 690px;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100px;
+}
+
+
+/* content search*/
+.search {
+    width: 100%;
+    padding-top: 10px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #47ccff;
+    position: relative;
+}
+.search .cari{
+    box-sizing: border-box;
+    width: 80%;
+}
+.search .cari button {
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 95px;
+    background-color: rgb(22, 194, 22);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: -10px;
+    /* margin-left: -2px; */
+}
+
+.search .cari button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.search .cari input {
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    width: 80%;
+    display: inline-block;
+}
+.slogan {
+    width: 80%;
+    font-size: 20px;
+    float: left;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.search .domain{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+}
+.search .domain ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: white;
+}
+.search .domain ul li{
+    border-right: 0.5px solid white;
+    padding-right: 5px;
+    margin: 5px auto;
+}
+.search .domain ul li:nth-child(5){
+    border: none;
+
+}
+.search .domain ul li img{
+    width: 40px;
+    height: 30px;
+}
+.search .domain ul li .rp{
+    box-sizing: border-box;
+    font-size: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.search .domain ul li .harga{
+    font-size: 15px;
+    font-weight: 550;
+}
+
+/*  card */
+.container {
+    margin: 50px auto;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.card {
+    border: 0.5px solid silver;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    margin: 30px;
+    box-shadow:  0 4px 8px 0 silver;
+}
+
+.card .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .header p{
+    margin-top: 45px;
+    font-size: 20px;
+    color: grey;
+}
+.card .header img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: white;
+    border: 1px solid silver;
+    margin-top: 10px;
+}
+
+.card .header {
+    height: 30%;
+    background-color: #f5f5f5;
+    border-bottom: 0.5px solid silver;
+}
+
+.card .content {
+    text-align: justify;
+    padding-bottom: 20px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+}
+.card .content button{
+    height: 35px;
+    margin-top: 20px;
+    width: 90%;
+    font-size: 15px;
+    padding:6px 0 6px 0;
+    border: none;
+    color: white;
+    font-weight: 400;
+    border-radius: 2px;
+    background-color:  #2e4c9b;
+    cursor: pointer;
+}
+
+.card .content button:hover{
+    background-color: silver;
+    color: black;
+}
+.card.besar {
+    transform: scale(1.12); 
+}
+
+p {
+    font-size: 15px;
+    margin: 25px 15px auto;
+}
+.content ul{
+    margin: 10px 10px auto;
+}
+.content ul li{
+    font-size: 15px;
+    margin: 2px 20px auto;
+    list-style-type: ;
+}
+hr{
+    width: 90%;
+    border: 0.5px solid silver;
+    border-radius: 3px;
+}
+.content .harga{
+    width: 45%;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: -10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: rgb(68, 66, 66);
+}
+
+/* main */
+.main{
+    width: 100%;
+    height: 200px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+}
+.main p{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* kontak */
+.CS{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #003356;
+    border: 1px solid black;
+}
+.CS .kontak{
+    margin: 10px;
+}
+.CS .kontak a{
+    text-decoration: none;
+    color: silver;
+}
+.CS .kontak a:hover{
+    background-color: silver;
+    color: black;
+}
+
+/* footer */
+
+footer{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+footer .foot h3{
+    color: silver;
+}
+footer .foot ul li{
+    font-size: 15px;
+    margin: 5px auto;
+    list-style-type: none;
+}
+footer .foot ul li a{
+    text-decoration: none;
+    color: silver;
+}
+footer .foot ul li a:hover{
+    color: #47ccff;
+}
+
+
+/* hamburger menu animation */
+.menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+    /*poros*/
+}
+
+.menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toogle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+
+/* responsive breakpoint */
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .menu-toogle {
+        display: flex;
+    }
+    nav{
+        position: fixed;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        /*veiwport height*/
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: silver;
+        transform: translatex(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    header{
+        display: none;
+    }
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid black;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .search{
+        padding-top: 25px;
+    }
+    .search .cari{   
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .search .cari input{
+        width: 90%;
+    }
+    .search .slogan{
+        width: 98%;
+        display: flex;
+        justify-content: center;
+    }
+    .search .domain{
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 1300px;
+    }   
+    .container .card{
+        width: 90%;
+        height: 100%;
+    }
+    .card.besar{
+        transform: scale(1);
+    }
+
+    .main h1{
+        font-size: 25px;
+    }
+    .main p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .CS{
+        display: none;
+    }
+    footer{
+        display: flex;
+    }
+    footer .foot:nth-child(1){
+        display: none;
+    }
+    footer .foot:nth-child(2){
+        display: none;
+    }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    box-shadow: 0 4px 8px 0 silver;;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    display: flex;
+    background-color: #003356;
+    justify-content: space-around;  
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 0 7px rgba(204, 202, 202, 0.849);
+    z-index: 4;
+}
+
+nav .logo {
+    letter-spacing: 3px;
+}
+
+nav .logo h1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+nav .logo h1 a:hover{
+    color: green;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+/* hamburgermenu */
+.menu-toogle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+header img {
+    height: 690px;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100px;
+}
+
+
+.container {
+    padding: 10px;
+    background-color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: #2b84e9;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0,9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;    
+}
+
+/* hamburger menu animation */
+.menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+    /*poros*/
+}
+
+.menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toogle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .menu-toogle {
+        display: flex;
+    }
+    nav{
+        position: relative;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        /*veiwport height*/
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #003356;;
+        transform: translatex(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid black;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .container input[type=text], input[type=password] {
+        width: 90%;
+    }
+    .container button[type=submit]{
+        width: 95%;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- navigasi -->
+    <nav>
+        <div class="logo">
+            <h1><a href="latihanprojek.html">BitHoster</h1></a>
+        </div>
+        <ul>
+            <li><a href="">DOMAIN</a></li>
+            <li><a href="">WEBSITE</a></li>
+            <li><a href="">HOSTING</a></li>
+            <li><a href="">SEMUA LAYANAN</a></li>
+            <li><a href="login.html[1].html">LOGIN</a></li>
+        </ul>
+
+        <div class="menu-toogle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <script src="toogle.js"></script>
+
+<form action="/action_page.php">
+    <div class="container">
+        <h1>Register</h1>
+        <hr>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Your Name" name="name" id="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+         
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" nama="psw" id="psw" required>
+
+        <label for="password-confirm"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="psw-confirm" id="psw-confirm" required>
+
+        <hr>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
+
+        <button type="submit" class="registerbtn">Register</button>
+
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a href="#">Sign in</a></p>
+    </div>
+</form>
+</body>
+</html>
